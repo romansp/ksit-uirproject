@@ -1,0 +1,34 @@
+﻿Public Class Form1
+    Public items As Items = New Items()
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        If (Not (ComboBox2.SelectedItem = "") And Not( TextBox1.Text = "")) Then
+            Select Case ComboBox2.SelectedItem
+                Case items.products(0).ToString
+                    items.Add(0, CInt(TextBox1.Text))
+                Case items.products(1).ToString
+                    items.Add(1, CInt(TextBox1.Text))
+                Case items.products(2).ToString
+                    items.Add(2, CInt(TextBox1.Text))
+            End Select
+        End If
+        ListBox1.Items.Clear()
+        items.print_to_Label(ListBox1)
+    End Sub
+End Class
+
+Public Class Items
+    Public products As String() = {"Процессор Intel i3", "Процессор Intel i5", "Процессор Intel i7"}
+    Public quantity As Integer() = {0, 0, 0}
+
+    Public Sub Add(ByVal index, ByVal quant)
+        quantity(index) = quantity(index) + quant
+    End Sub
+
+    Public Sub print_to_Label(ByVal Lstbox As ListBox)
+        Dim tab As Char = ChrW(9)
+        For i As Integer = 0 To products.Length - 1
+            Lstbox.Items.Add(quantity(i).ToString + " шт." + tab + products(i))
+            Next
+    End Sub
+End Class

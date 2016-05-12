@@ -1,0 +1,17 @@
+﻿Public Class Form1
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Dim f, c, x, b, a As Double
+
+        x = 3.4
+        a = 1.12
+        b = -3.24
+
+        c = b * Math.Cos(x / 4) - 0.78 * Math.Pow(x, 3)
+        TextBox1.Text = c
+
+        f = c * Math.Exp(-2) * Math.Sqrt(x) - b * Math.Exp(-a)
+        TextBox2.Text = f
+
+    End Sub
+End Class

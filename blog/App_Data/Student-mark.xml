@@ -1,0 +1,69 @@
+<?xmlversion = "1.0" encoding="utf-8" ?>
+<record-book>
+  <book number="09-000000-009"
+  FirstName="Алёшина"
+  LastName="Татьяна"
+  Year="2009">
+    <disciplines>
+      <discipline mark="6"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="5"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+  <book number="09-000000-010"
+  FirstName="Иванова"
+  LastName="Ольга"
+  Year="2009">
+    <disciplines>
+      <discipline mark="7"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="8"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+  <book number="09-000000-011"
+  FirstName="Петров"
+  LastName="Василий"
+  Year="2009">
+    <disciplines>
+      <discipline mark="4"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="4"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+  <book number="09-000000-012"
+  FirstName="Сидоров"
+  LastName="Константин"
+  Year="2009">
+    <disciplines>
+      <discipline mark="8"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="9"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+  <book number="09-000000-013"
+  FirstName="Васнецова"
+  LastName="Василиса"
+  Year="2009">
+    <disciplines>
+      <discipline mark="6"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="7"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+  <book number="09-000000-014"
+  FirstName="Пушкин"
+  LastName="Александр"
+  Year="2009">
+    <disciplines>
+      <discipline mark="8"
+      name="Компьютерные сети и Интернет-технологии" />
+      <discipline mark="9"
+      name="Системы управления базами данных" />
+    </disciplines>
+  </book>
+</record-book>

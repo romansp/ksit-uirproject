@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/index.aspx" title="КСИТ / Павлов Роман"  description="">
+    <siteMapNode url="~/labs/lab1/index.aspx" title="Базовые понятия ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab2/index.aspx" title="Создание страниц ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab3/index.aspx" title="Использование Visual Basic.NET"  description="" />
+    <siteMapNode url="~/labs/lab4/index.aspx" title="Использование объектов ASP.NET в языке программирования C#"  description="" />
+    <siteMapNode url="~/labs/lab5/index.aspx" title="Основы работы с элементами графического интерфейса ASP.NET Web Forms"  description="" />
+    <siteMapNode url="~/labs/lab6/index.aspx" title="Серверные элементы управления входом"  description="" />
+    <siteMapNode url="~/labs/lab7/index.aspx" title="Пользовательские элементы управления"  description="" />
+    <siteMapNode url="~/labs/lab8/index.aspx" title="Организация доступа к базам данным в ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab9/index.aspx" title="Управление данными в ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab10/index.aspx" title="Модификация данных в ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab11/index.aspx" title="Использование XML-файлов в ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab12/index.aspx" title="Веб-службы в ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab13/index.aspx" title="Реализация моделей бизнес-логики на базе веб-служб ASP.NET"  description="" />
+    <siteMapNode url="~/labs/lab14/index.aspx" title="Добавление ссылок на веб-службы в ASP.NET"  description="" />
+  </siteMapNode>
+</siteMap>

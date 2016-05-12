@@ -1,0 +1,71 @@
+﻿body {
+    background: url("noisy_grid.png") transparent;
+    font-family: "Lucida Grande" , "Tahoma" , sans-serif;
+    font-size: 12px;
+    margin: 50px;
+    padding: 0px;
+}
+
+#testapp {
+    background: #FFFFFF;
+    border: 1px solid currentColor;
+    box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.29);
+    margin: 0px auto 25px;
+    padding: 10px;
+    width: 860px;
+}
+
+.qtable {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.qtable th {
+    font-size: 1.25em;
+}
+
+.qtable, th, td {
+    border: 1px solid rgb(41, 183, 158);
+    padding: 5px;
+}
+        
+.item {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.qtable td.answer, td.answer > * { 
+    cursor: pointer;
+}
+
+.test{ }
+        
+.answer{ }
+        
+.question{ }
+        
+.footer {
+    display: block
+}
+
+.header {
+    text-align: center;
+    font-size: 1.25em
+}
+.title {
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 10px;
+            
+}
+        
+.instructions {
+    margin-left: 10px;
+    text-align: left;
+}
+        
+#info {
+    font-weight: 600;
+    color: red;
+}

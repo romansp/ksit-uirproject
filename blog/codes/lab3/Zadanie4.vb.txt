@@ -1,0 +1,22 @@
+﻿Public Class Form1
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim term As String = ComboBox1.SelectedItem.ToString()
+        Select term
+            Case "ASP.NET"
+                RichTextBox1.Text = "ASP.NET — это веб-платформа, предоставляющая все необходимые службы для создания серверных веб-приложений корпоративного класса. ASP.NET создана на основе платформы .NET Framework, поэтому все функции .NET Framework доступны для приложений ASP.NET. Приложения могут быть написаны на любом языке, совместимом со средой CLR, включая Visual Basic и C#."
+            Case "CLR"
+                RichTextBox1.Text = "Common Language Runtime (англ. CLR — общеязыковая исполняющая среда) — виртуальная машина, интерпретирующая и исполняющая код на языке CIL (Common Intermediate Language), в который компилируются программы, написанные, в частности, на .NET-совместимых языках программирования (C#, Managed C++, Visual Basic .NET, Visual J# и т. п.); компонент пакета Microsoft .NET Framework."
+            Case "CIL"
+                RichTextBox1.Text = "Common Intermediate Language (сокращённо CIL) — промежуточный язык, разработанный фирмой Microsoft для платформы .NET Framework. JIT-компилятор CIL является частью так называемой CLR (англ. Common Language Runtime) — общей среды выполнения языков .NET."
+            Case "Виртуальный каталог"
+                RichTextBox1.Text = "Виртуальный каталог представляет собой ссылку на существующий физический каталог, расположенный на жестком диске сервера. Для виртуальных каталогов можно установить множество индивидуальных параметров, например, отдельные настройки ASP.NET, полномочия доступа, защита URL с помощью пароля и т.д."
+            Case "Метаданные в .NET"
+                RichTextBox1.Text = "Метаданные в .NET (англ. .NET metadata) — термин, обозначающий определённые структуры данных, добавляемые в код Common Intermediate Language для описания высокоуровневой структуры кода. Метаданные описывают все классы и члены классов, определённые в сборке, а также классы и члены классов, которые текущая сборка вызывает из другой сборки. Метаданные для метода содержат полное описание метода, включая его класс (а также сборку, содержащую этот класс), его возвращаемый тип и все параметры этого метода."
+        End Select
+    End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+End Class

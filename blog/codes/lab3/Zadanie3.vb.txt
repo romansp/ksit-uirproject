@@ -1,0 +1,74 @@
+﻿Public Class Form1
+    Dim Questions() As String = {"1. Как расшифровывается ASP?", "2. Выберите корректную для VB.NET операцию", "3. Все типы данных VB.NET являются объктами?", "4. Какой из веб-серверов разработан Microsoft?", "5. Common Language Runtime (CLR) - это"}
+    Dim numberOfQuestions As Integer = Questions.Length()
+    Dim Answers(,) As String = {{"Active Server Pages", "Activated Service Product"}, {"Dim qIndex[] As Integer = (1, 2, 3)", "Dim qIndex() As Integer = {1, 2, 3}"}, {"Да", "Нет"}, {"Apache", "IIS"}, {"виртуальная машина, в которой компилируются программы на .NET-совместимых языках программирования.", "средство компиляции программ на многих языках для исполнения в Microsoft Windows."}}
+    Dim qIndex As Integer = 0
+    Dim aIndex As Integer = 0
+    Dim userAnswers(4) As Integer
+    Dim rightAnswers() As Integer = {1, 2, 1, 2, 1}
+    Dim correctPercentage As Integer = 0
+
+    'Старт теста, прячем кнопку старта и показываем первый вопрос
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Button1.Visible = False
+        questionLabel.Visible = True
+        RadioButton1.Visible = True
+        RadioButton2.Visible = True
+        nextQuestionButton.Visible = True
+
+        questionLabel.Text = Questions(qIndex)
+        RadioButton1.Text = Answers(aIndex, 0)
+        RadioButton2.Text = Answers(aIndex, 1)
+    End Sub
+
+    'Прячем форму вопроса при запуске приложения
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        questionLabel.Visible = False
+        RadioButton1.Visible = False
+        RadioButton2.Visible = False
+        nextQuestionButton.Visible = False
+    End Sub
+
+    Private Sub nextQuestionButton_Click(sender As System.Object, e As System.EventArgs) Handles nextQuestionButton.Click
+        
+		'Сохраняем ответ на вопрос
+        If qIndex < numberOfQuestions Then
+            If RadioButton1.Checked Then
+                userAnswers(aIndex) = 1
+            ElseIf RadioButton2.Checked Then
+                userAnswers(aIndex) = 2
+            End If
+        End If
+
+        'Увеличиваем счетчики вопросов и вариантов ответа, если ответ был дан
+        If (RadioButton1.Checked Or RadioButton2.Checked) Then
+            qIndex = qIndex + 1
+            aIndex = aIndex + 1
+            If qIndex <= numberOfQuestions - 1 Then
+                questionLabel.Text = Questions(qIndex)
+                RadioButton1.Text = Answers(aIndex, 0)
+                RadioButton2.Text = Answers(aIndex, 1)
+            End If
+        End If
+
+        'Если это был последний вопрос, то проверим ответы и подсчитаем проценты
+        If qIndex >= numberOfQuestions Then
+            Dim i As Integer = 0
+            For Each answer In userAnswers
+                If answer = rightAnswers(i) Then
+                    correctPercentage = correctPercentage + 100 / numberOfQuestions
+                End If
+                i = i + 1
+            Next answer
+
+            'Выведем результат теста
+            If correctPercentage >= 60 Then
+                MsgBox("Тест успешно сдан.")
+                Me.Close()
+            Else
+                MsgBox("Вы не сдали тест.", MsgBoxStyle.OkOnly, "Результаты теста")
+                Me.Close()
+            End If
+        End If
+    End Sub
+End Class

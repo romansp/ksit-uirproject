@@ -1,0 +1,33 @@
+﻿Public Class Form1
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim password As String = passwordBox.Text.ToString()
+        Dim confirmPassword As String = confirmPasswordBox.Text.ToString()
+        Dim Name As String = nameBox.Text.ToString()
+        Dim Email As String = emailBox.Text.ToString()
+
+        'Проверка заполнения всех полей
+        If (password = "" Or confirmPassword = "" Or Name = "" Or Email = "") Then
+            ErrorLabel.Visible = True
+            ErrorLabel.Text = "Необходимо заполнить все поля!"
+        End If
+        'Проверка совпадения паролей. Если пароли совпадают, то произвести регистрацию.
+        If Not (password = confirmPassword) Then
+            ErrorLabel.Visible = True
+            ErrorLabel.Text = "Пароли не совпадают!"
+        ElseIf (password = confirmPassword And Not (password = "" Or confirmPassword = "" Or Name = "" Or Email = "")) Then
+            ErrorLabel.Visible = False
+            PictureBox1.Visible = True
+            welcomeLabel.Text = "Добро пожаловать, " + Name + "!"
+            welcomeLabel.Visible = True
+            System.Diagnostics.Process.Start("http://ksit.uirproject.ru")
+        End If
+
+    End Sub
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        ErrorLabel.Visible = False
+        PictureBox1.Visible = False
+        welcomeLabel.Visible = False
+    End Sub
+End Class

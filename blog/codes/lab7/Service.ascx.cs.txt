@@ -1,0 +1,73 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class labs_lab7_Service : System.Web.UI.UserControl
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label1.Visible = false;
+        ListBox1.AutoPostBack = true;
+        ListBox2.AutoPostBack = true;
+        Label1.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+    }
+
+    public ListItemCollection SelectedItems
+    {
+        get { return ListBox2.Items; }
+    }
+
+    public void AddService(string newService)
+    {
+        ListItem newListItem = new ListItem(newService);
+        if (ListBox1.Items.Contains(newListItem))
+        {
+            Label1.Text = "Эта услуга уже добавлена";
+            Label1.Visible = true;
+        }
+        else
+        {
+            Label1.Visible = false;
+            ListBox1.Items.Add(newListItem);
+        }
+    }
+
+    public Boolean AllowDuplicates
+    {
+        get { return (Boolean)ViewState["allowDuplicates"]; }
+        set { ViewState["allowDuplicates"] = value; }
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (AllowDuplicates == false && SelectedItems.Contains(ListBox1.SelectedItem))
+        {
+            Label1.Text = "Эта услуга уже выбрана";
+            Label1.Visible = true;
+        }
+        else
+        {
+            Label1.Visible = false;
+            ListBox2.Items.Add(ListBox1.SelectedItem);
+        }
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        foreach (ListItem item in ListBox1.Items)
+        {
+            if (AllowDuplicates == false && SelectedItems.Contains(item))
+                continue;
+            ListBox2.Items.Add(item);
+        }
+    }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        ListBox2.Items.Remove(ListBox2.SelectedItem);
+    }
+}

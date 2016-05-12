@@ -1,0 +1,50 @@
+﻿Public Class Form1
+    Dim colors As Integer() = {1, 2, 3, 4, 5, 6, 7}
+    Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim color As String = ComboBox1.SelectedItem.ToString()
+        If color = "Красный" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(255, 0, 0)
+        ElseIf color = "Оранжевый" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(255, 127, 0)
+        ElseIf color = "Желтый" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(255, 255, 0)
+        ElseIf color = "Зеленый" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(0, 255, 0)
+        ElseIf color = "Голубой" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(111, 127, 255)
+        ElseIf color = "Синий" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(0, 0, 255)
+        ElseIf color = "Фиолетовый" Then
+            rainbowLabel.ForeColor = Drawing.Color.FromArgb(143, 0, 255)
+        End If
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As System.Object, e As System.EventArgs) Handles Timer1.Tick
+        If ComboBox1.SelectedIndex >= 6 Then
+            ComboBox1.SelectedIndex = 0
+        Else
+            ComboBox1.SelectedIndex = ComboBox1.SelectedIndex + 1
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim parseResult As Integer = 1
+        If Not TextBox1.Text = "" And Integer.TryParse(TextBox1.Text, parseResult) Then
+            Timer1.Interval = CInt(TextBox1.Text)
+            Timer1.Start()
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
+        If Timer1.Enabled Then
+            Timer1.Stop()
+        End If
+    End Sub
+
+    Private Sub Form1_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Timer1.Interval = CInt(TextBox1.Text)
+        ComboBox1.SelectedIndex = 0
+    End Sub
+
+End Class
