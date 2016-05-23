@@ -1,7 +1,7 @@
 ﻿$(document).ready(function() {
     $('td.answer').click(function () {
         $(this).find('input:radio').attr('checked', true);
-        $(this).parent('.question').css('background', '#E3EB6B');
+        $(this).parent('.question').addClass('answered');
     });
 
     $(function () {

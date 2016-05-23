@@ -40,5 +40,9 @@ NavigateUrl="~/labs/lab12/index.aspx">Отчет по практической �
 <asp:HyperLink ID="HyperLink13" runat="server" 
 NavigateUrl="~/labs/lab13/index.aspx">Отчет по практической работе №13 &quot;Реализация моделей бизнес-логики на базе веб-служб ASP.NET&quot;</asp:HyperLink>
 <br />
+<br/>
+<asp:HyperLink ID="HyperLink14" runat="server" 
+NavigateUrl="~/afterlabs/testapp.html">Опросник "Карьерные ориентации"</asp:HyperLink>
+<br />
 </div>
 </asp:Content>
