@@ -4,68 +4,68 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Задание №5 / Лаб.раб.№5 / КСИТ</title>
+    <title>Р—Р°РґР°РЅРёРµ в„–5 / Р›Р°Р±.СЂР°Р±.в„–5 / РљРЎРРў</title>
     <style type="text/css"> ul { margin: 0px;} </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     
-        Демографическая карточка пользователя<br />
+        Р”РµРјРѕРіСЂР°С„РёС‡РµСЃРєР°СЏ РєР°СЂС‚РѕС‡РєР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ<br />
         <br />
-        Возраст (полных лет):
+        Р’РѕР·СЂР°СЃС‚ (РїРѕР»РЅС‹С… Р»РµС‚):
         <br />
         <asp:TextBox ID="TextBox1" runat="server" CausesValidation="True"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-            ControlToValidate="TextBox1" ErrorMessage="возраст. " ForeColor="#CC3300">*</asp:RequiredFieldValidator>
+            ControlToValidate="TextBox1" ErrorMessage="РІРѕР·СЂР°СЃС‚. " ForeColor="#CC3300">*</asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-            ErrorMessage="поле &quot;Возраст&quot; заполнено неверно. " 
+            ErrorMessage="РїРѕР»Рµ &quot;Р’РѕР·СЂР°СЃС‚&quot; Р·Р°РїРѕР»РЅРµРЅРѕ РЅРµРІРµСЂРЅРѕ. " 
             ControlToValidate="TextBox1" ValidationExpression="\d+" 
             ForeColor="#CC3300">*</asp:RegularExpressionValidator>
         <br />
 &nbsp;<fieldset style="border: thin dotted #808080; width: 160px">
-            <legend>Пол&nbsp;&nbsp;&nbsp; 
+            <legend>РџРѕР»&nbsp;&nbsp;&nbsp; 
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-            ControlToValidate="RadioButtonList1" ErrorMessage="пол. " ForeColor="#CC3300">*</asp:RequiredFieldValidator>
+            ControlToValidate="RadioButtonList1" ErrorMessage="РїРѕР». " ForeColor="#CC3300">*</asp:RequiredFieldValidator>
             </legend> 
             <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
                 CausesValidation="True" RepeatLayout="Flow">
-                <asp:ListItem>мужской</asp:ListItem>
-                <asp:ListItem>женский</asp:ListItem>
+                <asp:ListItem>РјСѓР¶СЃРєРѕР№</asp:ListItem>
+                <asp:ListItem>Р¶РµРЅСЃРєРёР№</asp:ListItem>
             </asp:RadioButtonList>
         </fieldset>
         <br />
         <fieldset style="border: thin dotted #808080; width: 160px">
-            <legend>Образование&nbsp;&nbsp;&nbsp;
+            <legend>РћР±СЂР°Р·РѕРІР°РЅРёРµ&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-            ControlToValidate="RadioButtonList2" ErrorMessage="образование. " 
+            ControlToValidate="RadioButtonList2" ErrorMessage="РѕР±СЂР°Р·РѕРІР°РЅРёРµ. " 
                     ForeColor="#CC3300">*</asp:RequiredFieldValidator>
             </legend> 
             <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatLayout="Flow">
-                <asp:ListItem>среднее</asp:ListItem>
-                <asp:ListItem>высшее</asp:ListItem>
+                <asp:ListItem>СЃСЂРµРґРЅРµРµ</asp:ListItem>
+                <asp:ListItem>РІС‹СЃС€РµРµ</asp:ListItem>
             </asp:RadioButtonList>
         </fieldset>
         <br />
         <fieldset style="border: thin dotted #808080; width: 160px">
-            <legend>Род занятий&nbsp;&nbsp;&nbsp;
+            <legend>Р РѕРґ Р·Р°РЅСЏС‚РёР№&nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" 
             runat="server" ControlToValidate="RadioButtonList3" 
-            ErrorMessage="род занятий. " ForeColor="#CC3300">*</asp:RequiredFieldValidator></legend> 
+            ErrorMessage="СЂРѕРґ Р·Р°РЅСЏС‚РёР№. " ForeColor="#CC3300">*</asp:RequiredFieldValidator></legend> 
             <asp:RadioButtonList ID="RadioButtonList3" runat="server" RepeatLayout="Flow">
-                <asp:ListItem>работаю</asp:ListItem>
-                <asp:ListItem>учусь</asp:ListItem>
-                <asp:ListItem>пенсионер</asp:ListItem>
-                <asp:ListItem>отдыхаю</asp:ListItem>
+                <asp:ListItem>СЂР°Р±РѕС‚Р°СЋ</asp:ListItem>
+                <asp:ListItem>СѓС‡СѓСЃСЊ</asp:ListItem>
+                <asp:ListItem>РїРµРЅСЃРёРѕРЅРµСЂ</asp:ListItem>
+                <asp:ListItem>РѕС‚РґС‹С…Р°СЋ</asp:ListItem>
             </asp:RadioButtonList>
         </fieldset>
         <br />
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
-            HeaderText="Необходимо исправить ошибки в полях: " />
-        <asp:Label ID="Label1" runat="server" Text="Данные успешно сохранены."></asp:Label>
+            HeaderText="РќРµРѕР±С…РѕРґРёРјРѕ РёСЃРїСЂР°РІРёС‚СЊ РѕС€РёР±РєРё РІ РїРѕР»СЏС…: " />
+        <asp:Label ID="Label1" runat="server" Text="Р”Р°РЅРЅС‹Рµ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅС‹."></asp:Label>
         <br />
         <asp:Button ID="Button1" runat="server"
-            Text="Сохранить" onclick="Button1_Click" />
+            Text="РЎРѕС…СЂР°РЅРёС‚СЊ" onclick="Button1_Click" />
         </div>
     </form>
 </body>

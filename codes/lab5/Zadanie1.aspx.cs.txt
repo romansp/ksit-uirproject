@@ -10,12 +10,12 @@ public partial class labs_lab5_Zadanie1 : System.Web.UI.Page
     protected void Server_Change(object Source, EventArgs e)
     {
         if (Radio1.Checked)
-            ans.InnerHtml = "Ваши знания по ASP.NET отлично";
+            ans.InnerHtml = "Р’Р°С€Рё Р·РЅР°РЅРёСЏ РїРѕ ASP.NET РѕС‚Р»РёС‡РЅРѕ";
         else if (Radio2.Checked)
-            ans.InnerHtml = "Ваши знания по ASP.NET хорошо";
+            ans.InnerHtml = "Р’Р°С€Рё Р·РЅР°РЅРёСЏ РїРѕ ASP.NET С…РѕСЂРѕС€Рѕ";
         else if (Radio3.Checked)
-            ans.InnerHtml = "Ваши знания по ASP.NET удовлетворительно";
+            ans.InnerHtml = "Р’Р°С€Рё Р·РЅР°РЅРёСЏ РїРѕ ASP.NET СѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ";
         else if (Radio4.Checked)
-            ans.InnerHtml = "Ваши знания по ASP.NET неудовлетворительно";
+            ans.InnerHtml = "Р’Р°С€Рё Р·РЅР°РЅРёСЏ РїРѕ ASP.NET РЅРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ";
     }
 }

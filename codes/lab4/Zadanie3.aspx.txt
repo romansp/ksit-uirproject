@@ -9,12 +9,12 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        Введите имя пользователя:
+        Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ:
         <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox><br />
-        Пользователь ввел имя:
+        РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІРІРµР» РёРјСЏ:
         <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
         <br />
-        Имя пользователя, прочитанное в ходе сеанса: <asp:Label ID="Label3" runat="server"
+        РРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РїСЂРѕС‡РёС‚Р°РЅРЅРѕРµ РІ С…РѕРґРµ СЃРµР°РЅСЃР°: <asp:Label ID="Label3" runat="server"
             Text="Label"></asp:Label><br />
     
     </div>

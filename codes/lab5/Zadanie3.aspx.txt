@@ -4,19 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Задание №3 / Лаб.раб.№5 / КСИТ</title>
+    <title>Р—Р°РґР°РЅРёРµ в„–3 / Р›Р°Р±.СЂР°Р±.в„–5 / РљРЎРРў</title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        Города-побратимы Минска:<br />
+        Р“РѕСЂРѕРґР°-РїРѕР±СЂР°С‚РёРјС‹ РњРёРЅСЃРєР°:<br />
         <asp:ListBox ID="ListBox1" runat="server" Height="95px" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged"
             Width="145px" AutoPostBack="True">
-            <asp:ListItem>Киев</asp:ListItem>
-            <asp:ListItem>Детройт</asp:ListItem>
-            <asp:ListItem>Лион</asp:ListItem>
-            <asp:ListItem>Тегеран</asp:ListItem>
-            <asp:ListItem>Эйндховен</asp:ListItem>
+            <asp:ListItem>РљРёРµРІ</asp:ListItem>
+            <asp:ListItem>Р”РµС‚СЂРѕР№С‚</asp:ListItem>
+            <asp:ListItem>Р›РёРѕРЅ</asp:ListItem>
+            <asp:ListItem>РўРµРіРµСЂР°РЅ</asp:ListItem>
+            <asp:ListItem>Р­Р№РЅРґС…РѕРІРµРЅ</asp:ListItem>
         </asp:ListBox>
         <asp:Image ID="Image1" runat="server" ImageUrl="~/images/lab5/city1.png" 
             ImageAlign="Top" /></div>

@@ -7,11 +7,11 @@ using System.Xml;
 using DocumentFormat.OpenXml.Packaging;
 
 /// <summary>
-/// Сводное описание для Zadanie2
+/// РЎРІРѕРґРЅРѕРµ РѕРїРёСЃР°РЅРёРµ РґР»СЏ Zadanie2
 /// </summary>
 [WebService(Namespace = "http://www.pac.by/webserv")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-// Чтобы разрешить вызывать веб-службу из скрипта с помощью ASP.NET AJAX, раскомментируйте следующую строку. 
+// Р§С‚РѕР±С‹ СЂР°Р·СЂРµС€РёС‚СЊ РІС‹Р·С‹РІР°С‚СЊ РІРµР±-СЃР»СѓР¶Р±Сѓ РёР· СЃРєСЂРёРїС‚Р° СЃ РїРѕРјРѕС‰СЊСЋ ASP.NET AJAX, СЂР°СЃРєРѕРјРјРµРЅС‚РёСЂСѓР№С‚Рµ СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ. 
 // [System.Web.Script.Services.ScriptService]
 public class Lab13Zadanie1 : WebService {
     [WebMethod]
@@ -50,7 +50,7 @@ public class Lab13Zadanie1 : WebService {
             nsManager.AddNamespace("d", worksheetSchema);
             nsManager.AddNamespace("s", sharedStringSchema);
 
-            string searchString = string.Format("//d:sheet[@name='{0}']", "Лист1");
+            string searchString = string.Format("//d:sheet[@name='{0}']", "Р›РёСЃС‚1");
             XmlNode sheetNode = doc.SelectSingleNode(searchString, nsManager);
             if (sheetNode != null)
             {

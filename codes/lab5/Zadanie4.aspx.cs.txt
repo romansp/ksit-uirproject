@@ -13,47 +13,47 @@ public partial class labs_lab5_Zadanie4 : System.Web.UI.Page
     {
         if (e.Day.Date.Day == 1 && e.Day.Date.Month == 1) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />Новый Год"));
+            e.Cell.Controls.Add(new LiteralControl("<br />РќРѕРІС‹Р№ Р“РѕРґ"));
         }
 
         else if (e.Day.Date.Day == 7 && e.Day.Date.Month == 1) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />Рождество Христово (православное)"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р РѕР¶РґРµСЃС‚РІРѕ РҐСЂРёСЃС‚РѕРІРѕ (РїСЂР°РІРѕСЃР»Р°РІРЅРѕРµ)"));
         }
 
         else if (e.Day.Date.Day == 8 && e.Day.Date.Month == 3) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />День женщин"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р”РµРЅСЊ Р¶РµРЅС‰РёРЅ"));
         }
 
         else if (e.Day.Date.Day == 1 && e.Day.Date.Month == 5) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />Праздник труда"));
+            e.Cell.Controls.Add(new LiteralControl("<br />РџСЂР°Р·РґРЅРёРє С‚СЂСѓРґР°"));
         }
 
         else if (e.Day.Date.Day == 24 && e.Day.Date.Month == 4) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />Радоница"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р Р°РґРѕРЅРёС†Р°"));
         }
 
         else  if (e.Day.Date.Day == 9 && e.Day.Date.Month == 5) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />День Победы"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р”РµРЅСЊ РџРѕР±РµРґС‹"));
         }
 
         else if (e.Day.Date.Day == 3 && e.Day.Date.Month == 7) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />День Республики"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р”РµРЅСЊ Р РµСЃРїСѓР±Р»РёРєРё"));
         }
 
         else if (e.Day.Date.Day == 7 && e.Day.Date.Month == 11) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />День Октябрьской революции"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р”РµРЅСЊ РћРєС‚СЏР±СЂСЊСЃРєРѕР№ СЂРµРІРѕР»СЋС†РёРё"));
         }
 
         else if (e.Day.Date.Day == 25 && e.Day.Date.Month == 12) {
             e.Cell.BackColor = Color.FromArgb(255, 254, 110, 135);
-            e.Cell.Controls.Add(new LiteralControl("<br />Рождество Христово (католическое)"));
+            e.Cell.Controls.Add(new LiteralControl("<br />Р РѕР¶РґРµСЃС‚РІРѕ РҐСЂРёСЃС‚РѕРІРѕ (РєР°С‚РѕР»РёС‡РµСЃРєРѕРµ)"));
         }
     }
 }

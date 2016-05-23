@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Задание №4 / Лаб.раб.№5 / КСИТ</title>
+    <title>Р—Р°РґР°РЅРёРµ в„–4 / Р›Р°Р±.СЂР°Р±.в„–5 / РљРЎРРў</title>
 </head>
 <body>
     <form id="form1" runat="server">

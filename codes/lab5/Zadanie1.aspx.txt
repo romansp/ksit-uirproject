@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>Задание №1 / Лаб.раб.№5 / КСИТ</title>
+    <title>Р—Р°РґР°РЅРёРµ в„–1 / Р›Р°Р±.СЂР°Р±.в„–5 / РљРЎРРў</title>
 </head>
 <body>
    <form id="Form1" runat="server">
@@ -12,25 +12,25 @@
              name="Mode"
              onserverchange="Server_Change" 
              runat="server"/>
-      Отлично<br />
+      РћС‚Р»РёС‡РЅРѕ<br />
       <input type="radio" 
              id="Radio2" 
              name="Mode"
              onserverchange="Server_Change" 
              runat="server"/>
-      Хорошо<br />
+      РҐРѕСЂРѕС€Рѕ<br />
       <input type="radio" 
              id="Radio3" 
              name="Mode"
              onserverchange="Server_Change" 
              runat="server"/>
-      Удовлетворительно<br />
+      РЈРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ<br />
       <input type="radio" 
              id="Radio4" 
              name="Mode"
              onserverchange="Server_Change" 
              runat="server"/>
-      Неудовлетворительно<br />
+      РќРµСѓРґРѕРІР»РµС‚РІРѕСЂРёС‚РµР»СЊРЅРѕ<br />
       <p id="ans" runat="server" /> 
       <input type="submit" id="Button1" 
              value="Enter" 

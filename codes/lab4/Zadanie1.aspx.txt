@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Задание №1 / Лаб.раб.№4 / КСИТ</title>
+    <title>Р—Р°РґР°РЅРёРµ в„–1 / Р›Р°Р±.СЂР°Р±.в„–4 / РљРЎРРў</title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Label ID="Label1" runat="server" Text="Сейчас"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="РЎРµР№С‡Р°СЃ"></asp:Label>
         <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
         <br />
         <asp:Label ID="Label3" runat="server" Text=""></asp:Label></div>
