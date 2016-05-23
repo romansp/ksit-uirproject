@@ -15,5 +15,6 @@
     <siteMapNode url="~/labs/lab12/index.aspx" title="Веб-службы в ASP.NET"  description="" />
     <siteMapNode url="~/labs/lab13/index.aspx" title="Реализация моделей бизнес-логики на базе веб-служб ASP.NET"  description="" />
     <siteMapNode url="~/labs/lab14/index.aspx" title="Добавление ссылок на веб-службы в ASP.NET"  description="" />
+    <siteMapNode url="~/reports/DBvsFilesStoring.aspx" title="Хранение изображений: база данных или файловое хранилище?"  description="" />
   </siteMapNode>
 </siteMap>
