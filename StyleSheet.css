@@ -5,7 +5,7 @@ body {
 	padding: 0px;
 	font-size: 12px;
 	font-family: "Lucida Grande", "Tahoma", sans-serif;
-	background: url(/blog/images/noisy_grid.png) repeat;
+	background: url(images/noisy_grid.png) repeat;
 }
 
 h1 {font-size: 32px;}
