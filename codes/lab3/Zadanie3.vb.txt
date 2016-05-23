@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     Dim Questions() As String = {"1. Как расшифровывается ASP?", "2. Выберите корректную для VB.NET операцию", "3. Все типы данных VB.NET являются объктами?", "4. Какой из веб-серверов разработан Microsoft?", "5. Common Language Runtime (CLR) - это"}
     Dim numberOfQuestions As Integer = Questions.Length()
     Dim Answers(,) As String = {{"Active Server Pages", "Activated Service Product"}, {"Dim qIndex[] As Integer = (1, 2, 3)", "Dim qIndex() As Integer = {1, 2, 3}"}, {"Да", "Нет"}, {"Apache", "IIS"}, {"виртуальная машина, в которой компилируются программы на .NET-совместимых языках программирования.", "средство компиляции программ на многих языках для исполнения в Microsoft Windows."}}

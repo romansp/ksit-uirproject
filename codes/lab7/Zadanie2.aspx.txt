@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Zadanie2.aspx.cs" Inherits="labs_lab7_Zadanie2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Zadanie2.aspx.cs" Inherits="labs_lab7_Zadanie2" %>
 
 <%@ Register Src="Service.ascx" TagName="Service" TagPrefix="uc1" %>
 

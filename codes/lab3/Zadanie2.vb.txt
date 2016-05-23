@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     Dim colors As Integer() = {1, 2, 3, 4, 5, 6, 7}
     Private Sub ComboBox1_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim color As String = ComboBox1.SelectedItem.ToString()
