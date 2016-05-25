@@ -288,6 +288,9 @@
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="labs\lab10\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
@@ -414,6 +417,9 @@
     <Compile Include="MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
     </Compile>
     <Compile Include="reports\DBvsFilesStoring.aspx.cs">
       <DependentUpon>DBvsFilesStoring.aspx</DependentUpon>
