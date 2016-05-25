@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD654326-AA38-4157-88BF-74A3FF6B4546}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ksit_uirproject</RootNamespace>
+    <AssemblyName>ksit-uirproject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/90a337bd-c5e8-4f92-9215-8ac17d06b474/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ksit-uirproject</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="afterlabs\highcharts.js" />
+    <Content Include="afterlabs\jquery.min.js" />
+    <Content Include="afterlabs\noisy_grid.png" />
+    <Content Include="afterlabs\testapp.css" />
+    <Content Include="afterlabs\testapp.html" />
+    <Content Include="afterlabs\testlogics.js" />
+    <Content Include="App_Data\Student-mark.xml" />
+    <None Include="App_WebReferences\ru\uirproject\ksit\Zadanie1.disco" />
+    <Content Include="codes\lab10\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab10\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab10\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab10\Zadanie2.aspx.txt" />
+    <Content Include="codes\lab11\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab11\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab12\Zadanie1.asmx.txt" />
+    <Content Include="codes\lab12\Zadanie1.cs.txt" />
+    <Content Include="codes\lab13\Zadanie1.asmx.txt" />
+    <Content Include="codes\lab13\Zadanie1.cs.txt" />
+    <Content Include="codes\lab1\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab1\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab1\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab1\Zadanie2.aspx.txt" />
+    <Content Include="codes\lab1\Zadanie3.aspx.cs.txt" />
+    <Content Include="codes\lab1\Zadanie3.aspx.txt" />
+    <Content Include="codes\lab1\Zadanie4.aspx.cs.txt" />
+    <Content Include="codes\lab1\Zadanie4.aspx.txt" />
+    <Content Include="codes\lab1\Zadanie5.aspx.cs.txt" />
+    <Content Include="codes\lab1\Zadanie5.aspx.txt" />
+    <Content Include="codes\lab2\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab2\Zadanie2.aspx.txt" />
+    <Content Include="codes\lab2\Zadanie4.aspx.cs.txt" />
+    <Content Include="codes\lab2\Zadanie4.aspx.txt" />
+    <Content Include="codes\lab3\Zadanie1.vb.txt" />
+    <Content Include="codes\lab3\Zadanie2.vb.txt" />
+    <Content Include="codes\lab3\Zadanie3-5.vb.txt" />
+    <Content Include="codes\lab3\Zadanie3.vb.txt" />
+    <Content Include="codes\lab3\Zadanie4.vb.txt" />
+    <Content Include="codes\lab3\Zadanie5.vb.txt" />
+    <Content Include="codes\lab4\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab4\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab4\Zadanie2.cs.txt" />
+    <Content Include="codes\lab4\Zadanie3.aspx.cs.txt" />
+    <Content Include="codes\lab4\Zadanie3.aspx.txt" />
+    <Content Include="codes\lab4\Zadanie4.aspx.cs.txt" />
+    <Content Include="codes\lab4\Zadanie4.aspx.txt" />
+    <Content Include="codes\lab4\Zadanie5.aspx.cs.txt" />
+    <Content Include="codes\lab4\Zadanie5.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie2.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie2_flip.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie2_flip.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie3.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie3.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie4.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie4.aspx.txt" />
+    <Content Include="codes\lab5\Zadanie5.aspx.cs.txt" />
+    <Content Include="codes\lab5\Zadanie5.aspx.txt" />
+    <Content Include="codes\lab7\Login.ascx.cs.txt" />
+    <Content Include="codes\lab7\Login.ascx.txt" />
+    <Content Include="codes\lab7\Service.ascx.cs.txt" />
+    <Content Include="codes\lab7\Service.ascx.txt" />
+    <Content Include="codes\lab7\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab7\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab7\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab7\Zadanie2.aspx.txt" />
+    <Content Include="codes\lab8\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab8\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab9\Zadanie1.aspx.cs.txt" />
+    <Content Include="codes\lab9\Zadanie1.aspx.txt" />
+    <Content Include="codes\lab9\Zadanie2.aspx.cs.txt" />
+    <Content Include="codes\lab9\Zadanie2.aspx.txt" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\lab1\aspnet-logo.gif" />
+    <Content Include="images\lab1\group_photo.jpg" />
+    <Content Include="images\lab5\detroit.jpg" />
+    <Content Include="images\lab5\eindhoven.png" />
+    <Content Include="images\lab5\kiev.png" />
+    <Content Include="images\lab5\lyon.png" />
+    <Content Include="images\lab5\sb_1_a.png" />
+    <Content Include="images\lab5\sb_1_q.png" />
+    <Content Include="images\lab5\sb_2_a.png" />
+    <Content Include="images\lab5\sb_2_q.png" />
+    <Content Include="images\lab5\sb_3_a.png" />
+    <Content Include="images\lab5\sb_3_q.png" />
+    <Content Include="images\lab5\sb_4_a.png" />
+    <Content Include="images\lab5\sb_4_q.png" />
+    <Content Include="images\lab5\sb_5_a.png" />
+    <Content Include="images\lab5\sb_5_q.png" />
+    <Content Include="images\lab5\tehran.png" />
+    <Content Include="images\noisy_grid.png" />
+    <Content Include="index.aspx" />
+    <Content Include="labs\lab10\index.aspx" />
+    <Content Include="labs\lab10\Zadanie1.aspx" />
+    <Content Include="labs\lab10\Zadanie2.aspx" />
+    <Content Include="labs\lab11\index.aspx" />
+    <Content Include="labs\lab11\Zadanie1.aspx" />
+    <Content Include="labs\lab12\index.aspx" />
+    <Content Include="labs\lab12\Zadanie1.asmx" />
+    <Content Include="labs\lab13\index.aspx" />
+    <Content Include="labs\lab13\Zadanie1.asmx" />
+    <Content Include="labs\lab13\Zadanie1.aspx" />
+    <Content Include="labs\lab1\index.aspx" />
+    <Content Include="labs\lab1\Zadanie1.aspx" />
+    <Content Include="labs\lab1\Zadanie2.aspx" />
+    <Content Include="labs\lab1\Zadanie3.aspx" />
+    <Content Include="labs\lab1\Zadanie4.aspx" />
+    <Content Include="labs\lab1\Zadanie5.aspx" />
+    <Content Include="labs\lab2\index.aspx" />
+    <Content Include="labs\lab2\Zadanie2.aspx" />
+    <Content Include="labs\lab2\Zadanie4.aspx" />
+    <Content Include="labs\lab3\index.aspx" />
+    <Content Include="labs\lab4\index.aspx" />
+    <Content Include="labs\lab4\Zadanie1.aspx" />
+    <Content Include="labs\lab4\Zadanie3.aspx" />
+    <Content Include="labs\lab4\Zadanie4.aspx" />
+    <Content Include="labs\lab4\Zadanie5.aspx" />
+    <Content Include="labs\lab5\index.aspx" />
+    <Content Include="labs\lab5\Zadanie1.aspx" />
+    <Content Include="labs\lab5\Zadanie2.aspx" />
+    <Content Include="labs\lab5\Zadanie2_flip.aspx" />
+    <Content Include="labs\lab5\Zadanie3.aspx" />
+    <Content Include="labs\lab5\Zadanie4.aspx" />
+    <Content Include="labs\lab5\Zadanie5.aspx" />
+    <Content Include="labs\lab6\index.aspx" />
+    <Content Include="labs\lab7\index.aspx" />
+    <Content Include="labs\lab7\Login.ascx" />
+    <Content Include="labs\lab7\Service.ascx" />
+    <Content Include="labs\lab7\Zadanie1.aspx" />
+    <Content Include="labs\lab7\Zadanie2.aspx" />
+    <Content Include="labs\lab8\index.aspx" />
+    <Content Include="labs\lab8\Zadanie1.aspx" />
+    <Content Include="labs\lab9\index.aspx" />
+    <Content Include="labs\lab9\Zadanie1.aspx" />
+    <Content Include="labs\lab9\Zadanie1.sql" />
+    <Content Include="labs\lab9\Zadanie2.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="reports\DBvsFilesStoring.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <None Include="App_WebReferences\ru\uirproject\ksit\Zadanie1.discomap" />
+    <None Include="App_WebReferences\ru\uirproject\ksit\Zadanie1.wsdl" />
+    <Content Include="labs\lab10\Лаб.раб.№10.pdf" />
+    <Content Include="labs\lab11\Лаб.раб.№11.pdf" />
+    <Content Include="labs\lab1\Лаб.раб.№1.pdf" />
+    <Content Include="labs\lab2\Лаб.раб.№2.pdf" />
+    <Content Include="labs\lab3\Zadanie1.zip" />
+    <Content Include="labs\lab3\Zadanie2.zip" />
+    <Content Include="labs\lab3\Zadanie3-5.zip" />
+    <Content Include="labs\lab3\Zadanie3.zip" />
+    <Content Include="labs\lab3\Zadanie4.zip" />
+    <Content Include="labs\lab3\Zadanie5.zip" />
+    <Content Include="labs\lab3\Лаб.раб.№3.pdf" />
+    <Content Include="labs\lab4\Лаб.раб.№4.pdf" />
+    <Content Include="labs\lab5\Лаб.раб.№5.pdf" />
+    <Content Include="labs\lab6\Лаб.раб.№6.pdf" />
+    <Content Include="labs\lab7\Лаб.раб.№7.pdf" />
+    <Content Include="labs\lab8\Лаб.раб.№8.pdf" />
+    <Content Include="labs\lab9\Лаб.раб.№9.pdf" />
+    <Content Include="reports\Лаб.раб.№1.doc" />
+    <Content Include="reports\Лаб.раб.№3.doc" />
+    <Content Include="reports\Лаб.раб.№5.doc" />
+    <Content Include="reports\Лаб.раб.№6.doc" />
+    <Content Include="marks.xlsx" />
+    <Content Include="MasterPage.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="StyleSheet.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab10\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab10\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab10\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab11\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab11\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab12\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab13\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab13\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie3.aspx.designer.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie4.aspx.designer.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie5.aspx.designer.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab2\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab2\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab2\Zadanie4.aspx.designer.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab3\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab4\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie3.aspx.designer.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie4.aspx.designer.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie5.aspx.designer.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie2_flip.aspx.designer.cs">
+      <DependentUpon>Zadanie2_flip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie3.aspx.designer.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie4.aspx.designer.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie5.aspx.designer.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab6\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab7\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab7\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab7\Service.ascx.designer.cs">
+      <DependentUpon>Service.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab7\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab7\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab8\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab8\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab9\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab9\Zadanie1.aspx.designer.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="labs\lab9\Zadanie2.aspx.designer.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reports\DBvsFilesStoring.aspx.cs">
+      <DependentUpon>DBvsFilesStoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Clock.cs" />
+    <Compile Include="labs\lab10\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab10\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab10\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab11\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab11\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab12\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab12\lab12_Zadanie1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="labs\lab13\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab13\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab13\lab13_Zadanie1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie3.aspx.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie4.aspx.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab1\Zadanie5.aspx.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab2\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab2\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab2\Zadanie4.aspx.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab3\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab4\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie3.aspx.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie4.aspx.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab4\Zadanie5.aspx.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie2_flip.aspx.cs">
+      <DependentUpon>Zadanie2_flip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie3.aspx.cs">
+      <DependentUpon>Zadanie3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie4.aspx.cs">
+      <DependentUpon>Zadanie4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab5\Zadanie5.aspx.cs">
+      <DependentUpon>Zadanie5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab6\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab7\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab7\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab7\Service.ascx.cs">
+      <DependentUpon>Service.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab7\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab7\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab8\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab8\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab9\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab9\Zadanie1.aspx.cs">
+      <DependentUpon>Zadanie1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="labs\lab9\Zadanie2.aspx.cs">
+      <DependentUpon>Zadanie2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2406</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2406/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.2.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
