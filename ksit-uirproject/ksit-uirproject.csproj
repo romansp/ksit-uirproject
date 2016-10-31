@@ -25,6 +25,8 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/90a337bd-c5e8-4f92-9215-8ac17d06b474/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ksit-uirproject</ApplicationInsightsResourceId>
+    <IncludeSetAclProviderOnDestination>False</IncludeSetAclProviderOnDestination>
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -212,7 +214,6 @@
     <Content Include="packages.config" />
     <Content Include="reports\DBvsFilesStoring.aspx" />
     <Content Include="robots.txt" />
-    <Content Include="Service References\Application Insights\ConnectedService.json" />
     <None Include="App_WebReferences\ru\uirproject\ksit\Zadanie1.discomap" />
     <None Include="App_WebReferences\ru\uirproject\ksit\Zadanie1.wsdl" />
     <Content Include="labs\lab10\Лаб.раб.№10.pdf" />
@@ -565,9 +566,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

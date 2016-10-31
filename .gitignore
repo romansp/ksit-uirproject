@@ -240,3 +240,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/ksit-uirproject/Properties/PublishProfiles/masterhost-webdeploy.pubxml
